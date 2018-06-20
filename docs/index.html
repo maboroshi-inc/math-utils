@@ -921,18 +921,20 @@ img { max-width: 100%; }
 	<div class="content-wrap">
 		<div class="tsd-panel tsd-typography">
 			<h1 id="math-utils">math-utils</h1>
-			<p>Common utilities of mathematics.</p>
-			<h2 id="installation">Installation</h2>
+			<p>数学ユーティリティ</p>
+			<h2 id="-">インストール</h2>
 			<pre><code class="lang-sh">npm install @maboroshi/math-utils
 </code></pre>
 			<p>or</p>
 			<pre><code class="lang-sh">yarn add @maboroshi/math-utils
 </code></pre>
-			<h2 id="usage">Usage</h2>
+			<h2 id="-">使い方</h2>
 			<pre><code class="lang-js"><span class="hljs-keyword">import</span> { sum } <span class="hljs-keyword">from</span> <span class="hljs-string">'@maboroshi/math-utils'</span>
+
+<span class="hljs-built_in">console</span>.log(sum(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)) <span class="hljs-comment">// =&gt; 6</span>
 </code></pre>
 			<h2 id="api">API</h2>
-			<p>See <a href="https://maboroshi-inc.github.io/math-utils/">API document</a></p>
+			<p><a href="https://maboroshi-inc.github.io/math-utils/">API ドキュメント</a> を見る</p>
 		</div>
 		<div style="position:relative;"><a name="typedoc-main-index" class="tsd-anchor"></a></div>
 		<section class="tsd-panel-group tsd-index-group">
@@ -961,12 +963,12 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/a31b10c/src/average.ts#L9">src/average.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/63f4164/src/average.ts#L9">src/average.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>Get the average of values.</p>
+								<p>平均値を返す</p>
 							</div>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -974,12 +976,12 @@ img { max-width: 100%; }
 							<li>
 								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>values: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
 								<div class="tsd-comment tsd-typography">
-									<p>Numbers to calculate average.</p>
+									<p>（可変長）平均値を求めたい数値の集合</p>
 								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						<p>The average of <code>values</code></p>
+						<p><code>values</code> の平均値</p>
 					</li>
 				</ul>
 			</section>
@@ -993,12 +995,12 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/a31b10c/src/sum.ts#L7">src/sum.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/63f4164/src/sum.ts#L7">src/sum.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>Get the total of values.</p>
+								<p>合計値を返す</p>
 							</div>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1006,12 +1008,12 @@ img { max-width: 100%; }
 							<li>
 								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>values: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
 								<div class="tsd-comment tsd-typography">
-									<p>Numbers to calculate total</p>
+									<p>（可変長）合計値を求めたい数値の集合</p>
 								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						<p>The total of <code>values</code></p>
+						<p><code>values</code> の合計値</p>
 					</li>
 				</ul>
 			</section>
