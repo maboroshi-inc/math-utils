@@ -1,6 +1,6 @@
 {
   "name": "@maboroshi/math-utils",
-  "version": "1.2.0-alpha.0",
+  "version": "1.2.0",
   "description": "Common utilities of mathematics.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
