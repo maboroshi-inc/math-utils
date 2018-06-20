@@ -19,3 +19,7 @@ yarn add @maboroshi/math-utils
 ```js
 import { sum } from '@maboroshi/math-utils'
 ```
+
+## API
+
+See [API document](https://maboroshi-inc.github.io/math-utils/)
