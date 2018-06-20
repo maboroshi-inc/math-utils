@@ -913,6 +913,18 @@ img { max-width: 100%; }
 			<a href="globals.html#average" class="tsd-kind-icon">average</a>
 		</li>
 		<li class=" tsd-kind-function">
+			<a href="globals.html#direction" class="tsd-kind-icon">direction</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#distance" class="tsd-kind-icon">distance</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#map" class="tsd-kind-icon">map</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#mix" class="tsd-kind-icon">mix</a>
+		</li>
+		<li class=" tsd-kind-function">
 			<a href="globals.html#sum" class="tsd-kind-icon">sum</a>
 		</li>
 	</ul>
@@ -944,6 +956,10 @@ img { max-width: 100%; }
 						<h3>Functions</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-function"><a href="globals.html#average" class="tsd-kind-icon">average</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#direction" class="tsd-kind-icon">direction</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#distance" class="tsd-kind-icon">distance</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#map" class="tsd-kind-icon">map</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#mix" class="tsd-kind-icon">mix</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#sum" class="tsd-kind-icon">sum</a></li>
 						</ul>
 					</section>
@@ -962,7 +978,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/63f4164/src/average.ts#L9">src/average.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6298842/src/average.ts#L9">src/average.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -985,6 +1001,207 @@ img { max-width: 100%; }
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="direction" class="tsd-anchor"></a>
+				<h3>direction</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">direction<span class="tsd-signature-symbol">(</span>x1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, x2<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y2<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6298842/src/direction.ts#L10">src/direction.ts:10</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>点P1から見た点P2の方向を返す</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>x1: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>始点のX座標</p>
+								</div>
+							</li>
+							<li>
+								<h5>y1: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>始点のY座標</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> x2: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>終点のX座標</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> y2: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>終点のY座標</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						<p>始点（ <code>x1, y1</code> ）から見た終点（ <code>x2, y2</code> ）の方向をラジアンで返す</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="distance" class="tsd-anchor"></a>
+				<h3>distance</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">distance<span class="tsd-signature-symbol">(</span>x1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, x2<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y2<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6298842/src/distance.ts#L10">src/distance.ts:10</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>2点間の距離を返す</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>x1: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>始点のX座標</p>
+								</div>
+							</li>
+							<li>
+								<h5>y1: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>始点のY座標</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> x2: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>終点のX座標</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> y2: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>終点のY座標</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						<p>始点（ <code>x1, y1</code> ）と終点（ <code>x2, y2</code> ）の距離を返す</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="map" class="tsd-anchor"></a>
+				<h3>map</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">map<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, min1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, max1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, min2<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, max2<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6298842/src/map.ts#L12">src/map.ts:12</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>一方の集合の各元に対し
+								他方の集合のただひとつの元を返す</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>value: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>写像を求める値</p>
+								</div>
+							</li>
+							<li>
+								<h5>min1: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>データの最小値</p>
+								</div>
+							</li>
+							<li>
+								<h5>max1: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>データの最大値</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> min2: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;min1</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>絶対最小値</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> max2: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;max1</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>絶対最大値</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						<p><code>value</code> を <code>min1</code> から <code>max1</code> の集合を <code>min2</code> から <code>max2</code> の集合に写像したときの値を返す</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="mix" class="tsd-anchor"></a>
+				<h3>mix</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">mix<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6298842/src/mix.ts#L9">src/mix.ts:9</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>線形補完した値を返す</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>x: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>始点</p>
+								</div>
+							</li>
+							<li>
+								<h5>y: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>終点</p>
+								</div>
+							</li>
+							<li>
+								<h5>a: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>求める点</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						<p>始点 <code>x</code> から 終点 <code>y</code> の間にある点 <code>a</code> を返す</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="sum" class="tsd-anchor"></a>
 				<h3>sum</h3>
 				<ul class="tsd-signatures tsd-kind-function">
@@ -994,7 +1211,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/63f4164/src/sum.ts#L7">src/sum.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6298842/src/sum.ts#L7">src/sum.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
