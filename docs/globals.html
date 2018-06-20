@@ -910,6 +910,9 @@ img { max-width: 100%; }
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class=" tsd-kind-function">
+			<a href="globals.html#average" class="tsd-kind-icon">average</a>
+		</li>
+		<li class=" tsd-kind-function">
 			<a href="globals.html#sum" class="tsd-kind-icon">sum</a>
 		</li>
 	</ul>
@@ -919,6 +922,17 @@ img { max-width: 100%; }
 		<div class="tsd-panel tsd-typography">
 			<h1 id="math-utils">math-utils</h1>
 			<p>Common utilities of mathematics.</p>
+			<h2 id="installation">Installation</h2>
+			<pre><code class="lang-sh">npm install @maboroshi/math-utils
+</code></pre>
+			<p>or</p>
+			<pre><code class="lang-sh">yarn add @maboroshi/math-utils
+</code></pre>
+			<h2 id="usage">Usage</h2>
+			<pre><code class="lang-js"><span class="hljs-keyword">import</span> { sum } <span class="hljs-keyword">from</span> <span class="hljs-string">'@maboroshi/math-utils'</span>
+</code></pre>
+			<h2 id="api">API</h2>
+			<p>See <a href="https://maboroshi-inc.github.io/math-utils/">API document</a></p>
 		</div>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
@@ -927,6 +941,7 @@ img { max-width: 100%; }
 					<section class="tsd-index-section ">
 						<h3>Functions</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-function"><a href="globals.html#average" class="tsd-kind-icon">average</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#sum" class="tsd-kind-icon">sum</a></li>
 						</ul>
 					</section>
@@ -935,6 +950,38 @@ img { max-width: 100%; }
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="average" class="tsd-anchor"></a>
+				<h3>average</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">average<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in src/average.ts:9</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get the average of values.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>values: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Numbers to calculate average.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						<p>The average of <code>values</code></p>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="sum" class="tsd-anchor"></a>
 				<h3>sum</h3>
@@ -945,7 +992,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/47c404c/src/sum.ts#L7">src/sum.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/bcd566e/src/sum.ts#L7">src/sum.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
