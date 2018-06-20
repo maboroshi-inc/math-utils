@@ -1,2 +1,6 @@
 export { average } from './average'
+export { direction } from './direction'
+export { distance } from './distance'
+export { map } from './map'
+export { mix } from './mix'
 export { sum } from './sum'
