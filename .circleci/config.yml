@@ -5,6 +5,10 @@
 version: 2
 jobs:
   build:
+    branches:
+      ignore:
+        - master
+
     docker:
       # specify the version you desire here
       - image: circleci/node:8
@@ -44,4 +48,3 @@ jobs:
             JEST_JUNIT_OUTPUT: "/tmp/reports/junit/js-test-results.xml"
       - store_test_results:
           path: /tmp/reports/junit/js-test-results.xml
-
