@@ -9,6 +9,13 @@ typedoc.search.data = {
       name: 'sum',
       url: 'globals.html#sum',
       classes: 'tsd-kind-function'
+    },
+    {
+      id: 1,
+      kind: 64,
+      name: 'average',
+      url: 'globals.html#average',
+      classes: 'tsd-kind-function'
     }
   ]
 }
