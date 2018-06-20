@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Common utilities of mathematics.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "lint": "tslint ./**/*.ts",
     "lint:fix": "npm run lint -- --fix",
