@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Common utilities of mathematics.",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
+    "build": "rollup -c",
     "lint": "tslint ./**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "precommit": "lint-staged",
