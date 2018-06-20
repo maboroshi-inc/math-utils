@@ -1,8 +1,8 @@
 /**
- * Get the total of values.
+ * 合計値を返す
  *
- * @param values Numbers to calculate total
- * @returns The total of `values`
+ * @param values （可変長）合計値を求めたい数値の集合
+ * @returns `values` の合計値
  */
 export function sum(...values: number[]) {
   return values.reduce(
