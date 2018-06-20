@@ -43,5 +43,5 @@ jobs:
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
       - store_test_results:
-          path: ~/reports/junit/js-test-results.xml
+          path: reports/junit/js-test-results.xml
 
