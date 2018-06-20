@@ -1,0 +1,19 @@
+{
+  "name": "@maboroshi/math-utils",
+  "version": "1.0.0",
+  "description": "Common utilities of mathematics.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maboroshi-inc/math-utils.git"
+  },
+  "author": "Maboroshi Co., Ltd.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maboroshi-inc/math-utils/issues"
+  },
+  "homepage": "https://github.com/maboroshi-inc/math-utils#readme"
+}
