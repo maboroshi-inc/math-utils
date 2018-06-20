@@ -1,8 +1,8 @@
 # math-utils
 
-Common utilities of mathematics.
+数学ユーティリティ
 
-## Installation
+## インストール
 
 ```sh
 npm install @maboroshi/math-utils
@@ -14,12 +14,14 @@ or
 yarn add @maboroshi/math-utils
 ```
 
-## Usage
+## 使い方
 
 ```js
 import { sum } from '@maboroshi/math-utils'
+
+console.log(sum(1, 2, 3)) // => 6
 ```
 
 ## API
 
-See [API document](https://maboroshi-inc.github.io/math-utils/)
+[API ドキュメント](https://maboroshi-inc.github.io/math-utils/) を見る
