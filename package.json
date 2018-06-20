@@ -1,6 +1,6 @@
 {
   "name": "@maboroshi/math-utils",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Common utilities of mathematics.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -15,6 +15,7 @@
     "lint:fix": "npm run lint -- --fix",
     "precommit": "lint-staged",
     "prepublish": "npm run lint && npm run test && npm run build",
+    "release": "release-it --no-npm.publish",
     "test": "jest --coverage"
   },
   "repository": {
@@ -36,6 +37,7 @@
     "jest-junit": "^5.1.0",
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.5",
+    "release-it": "^7.4.7",
     "rollup": "^0.60.7",
     "rollup-plugin-typescript2": "^0.15.0",
     "ts-jest": "^22.4.6",
