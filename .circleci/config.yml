@@ -37,10 +37,11 @@ jobs:
       - run: npm run lint
         
       # run tests!
-      - run:
-        name: Jest Suite
-        command: npx jest --ci --testResultsProcessor="jest-junit"
-        environment:
-          JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
       - store_test_results:
           path: /tmp/test-results
+      - run:
+          name: Jest Suite
+          command: npx jest --ci --testResultsProcessor="jest-junit"
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+
