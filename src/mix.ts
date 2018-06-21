@@ -5,7 +5,7 @@ import { clamp } from './clamp'
  *
  * @param x 始点
  * @param y 終点
- * @param a [0 - 1] 求める点
+ * @param a 求める点 - `0` 以上 `1` 以下
  * @returns 始点 `x` から 終点 `y` の間にある点 `a` を返す
  */
 export function mix(x: number, y: number, a: number) {
