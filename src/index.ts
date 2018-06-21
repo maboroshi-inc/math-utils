@@ -1,4 +1,5 @@
 export { average } from './average'
+export { clamp } from './clamp'
 export { direction } from './direction'
 export { distance } from './distance'
 export { map } from './map'
