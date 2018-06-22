@@ -3,11 +3,11 @@
  * 他方の集合のただひとつの元を返す
  *
  * @param value 写像を求める値
- * @param min1 データの最小値
- * @param max1 データの最大値
- * @param min2 絶対最小値
- * @param max2 絶対最大値
- * @returns `value` を `min1` から `max1` の集合を `min2` から `max2` の集合に写像したときの値を返す
+ * @param min1 写像元の集合の最小値
+ * @param max1 写像元の集合の最大値
+ * @param min2 写像先の集合の最小値
+ * @param max2 写像先の集合の最大値
+ * @returns `value` を `min1` 以上 `max1` 以下の集合から `min2` 以上 `max2` 以下の集合へ写像したときの値を返す
  */
 export function map(
   value: number,
