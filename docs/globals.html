@@ -987,9 +987,14 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">PI2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;Math.PI * 2</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/916586d/src/pi2.ts#L1">src/pi2.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6e9af77/src/pi2.ts#L4">src/pi2.ts:4</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>2π</p>
+					</div>
+				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
@@ -1004,7 +1009,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/916586d/src/average.ts#L9">src/average.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6e9af77/src/average.ts#L9">src/average.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1036,7 +1041,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/916586d/src/clamp.ts#L8">src/clamp.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6e9af77/src/clamp.ts#L8">src/clamp.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1080,7 +1085,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/916586d/src/direction.ts#L10">src/direction.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6e9af77/src/direction.ts#L10">src/direction.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1130,7 +1135,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/916586d/src/distance.ts#L10">src/distance.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6e9af77/src/distance.ts#L10">src/distance.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1180,7 +1185,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/916586d/src/map.ts#L12">src/map.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6e9af77/src/map.ts#L12">src/map.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1200,30 +1205,30 @@ img { max-width: 100%; }
 							<li>
 								<h5>min1: <span class="tsd-signature-type">number</span></h5>
 								<div class="tsd-comment tsd-typography">
-									<p>データの最小値</p>
+									<p>写像元の集合の最小値</p>
 								</div>
 							</li>
 							<li>
 								<h5>max1: <span class="tsd-signature-type">number</span></h5>
 								<div class="tsd-comment tsd-typography">
-									<p>データの最大値</p>
+									<p>写像元の集合の最大値</p>
 								</div>
 							</li>
 							<li>
 								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> min2: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;min1</span></h5>
 								<div class="tsd-comment tsd-typography">
-									<p>絶対最小値</p>
+									<p>写像先の集合の最小値</p>
 								</div>
 							</li>
 							<li>
 								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> max2: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;max1</span></h5>
 								<div class="tsd-comment tsd-typography">
-									<p>絶対最大値</p>
+									<p>写像先の集合の最大値</p>
 								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						<p><code>value</code> を <code>min1</code> から <code>max1</code> の集合を <code>min2</code> から <code>max2</code> の集合に写像したときの値を返す</p>
+						<p><code>value</code> を <code>min1</code> 以上 <code>max1</code> 以下の集合から <code>min2</code> 以上 <code>max2</code> 以下の集合へ写像したときの値を返す</p>
 					</li>
 				</ul>
 			</section>
@@ -1237,7 +1242,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/916586d/src/mix.ts#L11">src/mix.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6e9af77/src/mix.ts#L11">src/mix.ts:11</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1281,7 +1286,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/916586d/src/sum.ts#L7">src/sum.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/maboroshi-inc/math-utils/blob/6e9af77/src/sum.ts#L7">src/sum.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
