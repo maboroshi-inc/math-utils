@@ -39,6 +39,9 @@ jobs:
 
       # run lint
       - run: npm run lint
+
+      # run type checking
+      - run: npx tsc --noEmit
         
       # run tests!
       - run:
