@@ -2,8 +2,8 @@ import { sum } from './'
 
 /**
  * 重み付け乱数を選択する
- * `Math.random()` とは異なり **整数値** を返す
  *
+ * @description `Math.random()` とは異なり **整数値** を返す
  * @param weights 重み付けリスト
  * @returns `weights` に基づいてランダムに `weights` のインデックスを返す
  * @todo `weights` が長大である場合に2分探索させる
