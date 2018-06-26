@@ -3,7 +3,7 @@ import { map, weightedRandom } from '../src'
 describe('weightedRandom()', () => {
   it('10万個の乱数の発生割合が重み付けリストの内容に収束する', () => {
     const weights = [5, 2, 3, 1, 4]
-    const counts = [0, 0, 0, 0, 0]
+    const counts = Array(weights.length).fill(0)
 
     let r
 
