@@ -1,6 +1,10 @@
 import { map, weightedRandom } from '../src'
 
 describe('weightedRandom()', () => {
+  it('重み付けリストに重複値が含まれている場合は例外が発生する。', () => {
+    expect(() => weightedRandom([1, 1, 2, 3])).toThrowError()
+  })
+
   it('10万個の乱数の発生割合が重み付けリストの内容に収束する', () => {
     const weights = [5, 2, 3, 1, 4]
     const counts = Array(weights.length).fill(0)
