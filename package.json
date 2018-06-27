@@ -50,5 +50,9 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "dependencies": {
+    "@types/lodash-es": "^4.17.0",
+    "lodash-es": "^4.17.10"
   }
 }
