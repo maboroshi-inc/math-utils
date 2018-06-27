@@ -1,3 +1,4 @@
+import { sortedIndex, sortedIndexOf } from 'lodash-es'
 import { sum } from './sum'
 
 /**
@@ -5,10 +6,14 @@ import { sum } from './sum'
  *
  * @description `Math.random()` とは異なり **整数値** を返す
  * @param weights 重み付けリスト - 各値はユニークでなくてはならない
+ * @param binarySearch 乱数選択を2分探索で行うか否か
  * @returns `weights` に基づいてランダムに `weights` のインデックスを返す
- * @todo `weights` が長大である場合に2分探索させる
+ * @todo テストを書く
  */
-export function weightedRandom(weights: number[]) {
+export function weightedRandom(
+  weights: number[],
+  binarySearch = weights.length > 9
+) {
   if (Array.from(new Set(weights)).length < weights.length) {
     throw new Error(
       'Invalid argument. Each element of weights list must be a unique value.'
@@ -19,19 +24,29 @@ export function weightedRandom(weights: number[]) {
   const totalWeight = sum(...sortedWeights)
   const r = Math.random() * totalWeight
 
-  let memo = 0
   let index = -1
 
-  sortedWeights.some((w, i) => {
-    memo += w
+  if (binarySearch) {
+    const tree = sortedWeights.reduce((t, w, i) => t.concat(t[i] + w), [0])
 
-    if (r < memo) {
-      index = i
-      return true
-    }
+    tree.pop()
+    index = sortedIndex(sortedWeights, r)
+  } else {
+    let memo = 0
 
-    return false
-  })
+    sortedWeights.some((w, i) => {
+      memo += w
 
-  return weights.indexOf(sortedWeights[index])
+      if (r < memo) {
+        index = i
+        return true
+      }
+
+      return false
+    })
+  }
+
+  return binarySearch
+    ? sortedIndexOf(weights, sortedWeights[index])
+    : weights.indexOf(sortedWeights[index])
 }
