@@ -15,7 +15,7 @@ export function weightedRandom(weights: number[]) {
     )
   }
 
-  const sortedWeights = Array.from(weights).sort()
+  const sortedWeights = Array.from(weights).sort((a, b) => a - b)
   const totalWeight = sum(...sortedWeights)
   const r = Math.random() * totalWeight
 
