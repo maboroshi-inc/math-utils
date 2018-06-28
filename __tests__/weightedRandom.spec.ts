@@ -29,10 +29,12 @@ describe('weightedRandom()', () => {
     }
 
     it('乱数の発生割合が重み付けリストの内容に収束する', () => {
-      return createAssertion([5, 2, 3, 1, 4])
+      expect.assertions(5)
+      return createAssertion([1, 2, 3, 4, 5])
     })
 
     it('乱数の発生割合が10件以上の長さを持つ重み付けリストの内容にも収束する', () => {
+      expect.assertions(10)
       return createAssertion([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     })
   })

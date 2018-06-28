@@ -12,7 +12,7 @@ import { sum } from './sum'
  * 重み付け乱数を選択する
  *
  * @description `Math.random()` とは異なり **整数値** を返す
- * @param weights 重み付けリスト - 各値はユニークでなくてはならない
+ * @param weights 重み付けリスト - 各値はユニークかつ昇順でなくてはならない
  * @param binarySearch 乱数選択を2分探索で行うか否か
  * @returns `weights` に基づいてランダムに `weights` のインデックスを返す
  * @todo テストを書く
@@ -27,21 +27,20 @@ export function weightedRandom(
     )
   }
 
-  const sortedWeights = Array.from(weights).sort((a, b) => a - b)
-  const totalWeight = sum(...sortedWeights)
+  const totalWeight = sum(...weights)
   const r = Math.random() * totalWeight
 
   let index = -1
 
   if (binarySearch) {
-    const tree = sortedWeights.reduce((t, w, i) => t.concat(t[i] + w), [0])
+    const tree = weights.reduce((t, w, i) => t.concat(t[i] + w), [0])
 
     tree.pop()
-    index = sortedIndex(sortedWeights, r)
+    index = sortedIndex(tree, r)
   } else {
     let memo = 0
 
-    sortedWeights.some((w, i) => {
+    weights.some((w, i) => {
       memo += w
 
       if (r < memo) {
@@ -54,6 +53,6 @@ export function weightedRandom(
   }
 
   return binarySearch
-    ? sortedIndexOf(weights, sortedWeights[index])
-    : weights.indexOf(sortedWeights[index])
+    ? sortedIndexOf(weights, weights[index])
+    : weights.indexOf(weights[index])
 }
