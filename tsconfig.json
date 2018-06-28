@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "moduleResolution": "node",
     "target": "es5",
     "module": "es2015",
     "lib": ["es2015"],
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "lodash/*": ["node_modules/@types/lodash-es/*"]
+    },
     "strict": true,
     "sourceMap": true,
     "declaration": true,

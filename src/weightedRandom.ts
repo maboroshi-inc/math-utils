@@ -1,4 +1,11 @@
-import { sortedIndex, sortedIndexOf } from 'lodash-es'
+/**
+ * tree-shaking のためにlodashの関数は個別にimportする
+ * また、ts-jest が lodash-es を解決できないので lodash を利用し、型定義は tsconfig にて lodash-es に向ける
+ * @see https://github.com/rollup/rollup/wiki/Troubleshooting#tree-shaking-doesnt-seem-to-be-working
+ * @see https://medium.com/@martin_hotell/tree-shake-lodash-with-webpack-jest-and-typescript-2734fa13b5cd
+ */
+import sortedIndex from 'lodash/sortedIndex'
+import sortedIndexOf from 'lodash/sortedIndexOf'
 import { sum } from './sum'
 
 /**
