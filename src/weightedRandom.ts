@@ -15,7 +15,6 @@ import { sum } from './sum'
  * @param weights 重み付けリスト - 各値はユニークかつ昇順でなくてはならない
  * @param binarySearch 乱数選択を2分探索で行うか否か
  * @returns `weights` に基づいてランダムに `weights` のインデックスを返す
- * @todo テストを書く
  */
 export function weightedRandom(
   weights: number[],
