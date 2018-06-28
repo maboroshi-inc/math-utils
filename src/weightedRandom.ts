@@ -5,7 +5,6 @@
  * @see https://medium.com/@martin_hotell/tree-shake-lodash-with-webpack-jest-and-typescript-2734fa13b5cd
  */
 import sortedIndex from 'lodash/sortedIndex'
-import sortedIndexOf from 'lodash/sortedIndexOf'
 import { sum } from './sum'
 
 /**
@@ -35,7 +34,7 @@ export function weightedRandom(
     const tree = weights.reduce((t, w, i) => t.concat(t[i] + w), [0])
 
     tree.pop()
-    index = sortedIndex(tree, r)
+    index = sortedIndex(tree, r) - 1
   } else {
     let memo = 0
 
@@ -51,7 +50,5 @@ export function weightedRandom(
     })
   }
 
-  return binarySearch
-    ? sortedIndexOf(weights, weights[index])
-    : weights.indexOf(weights[index])
+  return index
 }

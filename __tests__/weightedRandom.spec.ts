@@ -1,18 +1,13 @@
 import sortedIndex from 'lodash/sortedIndex'
-import sortedIndexOf from 'lodash/sortedIndexOf'
 import { map, weightedRandom } from '../src'
 
 jest.mock('lodash/sortedIndex', () => {
   return jest.fn(require.requireActual('lodash/sortedIndex'))
 })
-jest.mock('lodash/sortedIndexOf', () => {
-  return jest.fn(require.requireActual('lodash/sortedIndexOf'))
-})
 
 describe('weightedRandom()', () => {
   afterEach(() => {
     ;(sortedIndex as jest.Mock).mockClear()
-    ;(sortedIndexOf as jest.Mock).mockClear()
   })
 
   afterAll(() => {
@@ -62,21 +57,18 @@ describe('weightedRandom()', () => {
       weightedRandom([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
       expect(sortedIndex).toHaveBeenCalled()
-      expect(sortedIndexOf).toHaveBeenCalled()
     })
 
     it('`binarySearch = true` ならば常に2分探索する', () => {
       weightedRandom([1, 2, 3, 4, 5, 6, 7, 8, 9], true)
 
       expect(sortedIndex).toHaveBeenCalled()
-      expect(sortedIndexOf).toHaveBeenCalled()
     })
 
     it('`binarySearch = false` ならば常に2分探索しない', () => {
       weightedRandom([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], false)
 
       expect(sortedIndex).not.toHaveBeenCalled()
-      expect(sortedIndexOf).not.toHaveBeenCalled()
     })
   })
 })
