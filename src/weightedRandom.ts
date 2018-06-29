@@ -9,11 +9,13 @@ import { sum } from './sum'
 
 /**
  * 重み付け乱数を選択する
+ * - `Math.random()` とは異なり **整数値** を返す
  *
- * @description `Math.random()` とは異なり **整数値** を返す
  * @param weights 重み付けリスト - 各値は **ユニーク** かつ **昇順** でなくてはならない
  * @param binarySearch 乱数選択を2分探索で行うか否か
  * @returns `weights` に基づいてランダムに `weights` のインデックスを返す
+ * @throws `weights` に重複値が含まれている場合に例外を投げる
+ * @throws `weights` が昇順でない場合に例外を投げる
  */
 export function weightedRandom(
   weights: number[],
