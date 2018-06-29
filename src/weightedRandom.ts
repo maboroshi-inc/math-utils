@@ -25,6 +25,10 @@ export function weightedRandom(
     )
   }
 
+  if (weights.some((w, i) => i > 0 && weights[i - 1] > w)) {
+    throw new Error('Invalid argument. The weights list must be in ascending.')
+  }
+
   const totalWeight = sum(...weights)
   const r = Math.random() * totalWeight
 

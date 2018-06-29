@@ -14,8 +14,12 @@ describe('weightedRandom()', () => {
     jest.restoreAllMocks()
   })
 
-  it('重み付けリストに重複値が含まれている場合は例外が発生する。', () => {
+  it('重み付けリストに重複値が含まれている場合は例外を投げる', () => {
     expect(() => weightedRandom([1, 1, 2, 3])).toThrowError()
+  })
+
+  it('重み付けリストが昇順でない場合は例外を投げる', () => {
+    expect(() => weightedRandom([1, 2, 4, 3])).toThrowError()
   })
 
   describe('10万件の乱数を発生させる', () => {
