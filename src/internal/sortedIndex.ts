@@ -4,16 +4,16 @@
  * @param array 調査対象配列
  * @param value 評価値
  */
-export function _sortedIndex(array: number[], value: number): number {
+export function sortedIndex(array: number[], value: number): number {
   const { length } = array
 
   if (length > 1) {
     const mid = length >> 1 // @see https://github.com/darkskyapp/binary-search
 
     if (value < array[mid]) {
-      return _sortedIndex(array.slice(0, mid), value)
+      return sortedIndex(array.slice(0, mid), value)
     } else {
-      return mid + _sortedIndex(array.slice(mid), value)
+      return mid + sortedIndex(array.slice(mid), value)
     }
   }
 
