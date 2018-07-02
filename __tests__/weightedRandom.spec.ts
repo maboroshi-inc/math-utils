@@ -1,8 +1,12 @@
-import sortedIndex from 'lodash/sortedIndex'
+import { sortedIndex } from '../src/internal/sortedIndex'
 import { map, weightedRandom } from '../src'
 
-jest.mock('lodash/sortedIndex', () => {
-  return jest.fn(require.requireActual('lodash/sortedIndex'))
+jest.mock('../src/internal/sortedIndex', () => {
+  const mod = require.requireActual('../src/internal/sortedIndex')
+
+  return {
+    sortedIndex: jest.fn(mod.sortedIndex)
+  }
 })
 
 describe('weightedRandom()', () => {
