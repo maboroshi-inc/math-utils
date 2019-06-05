@@ -63,3 +63,4 @@ typings/
 # any
 dist
 .rpt2_cache
+/docs

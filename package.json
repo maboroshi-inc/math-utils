@@ -10,7 +10,6 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "doc": "typedoc --out ./docs --mode file --theme minimal",
     "lint": "tslint src/**/*.ts __tests__/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run lint && npm run test && npm run build",
@@ -44,7 +43,6 @@
     "rollup-plugin-typescript2": "^0.21.1",
     "ts-jest": "^24.0.2",
     "tslint": "^5.17.0",
-    "typedoc": "^0.14.2",
     "typescript": "^3.5.1"
   },
   "husky": {

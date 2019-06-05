@@ -2,7 +2,51 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 2
+version: 2.1
+
+commands:
+  # build TypeDoc
+  build-typedoc:
+    parameters:
+      typedoc-version:
+        description: version to use
+        type: string
+        default: latest
+
+      source:
+        description: source
+        type: string
+        default: ''
+
+      out:
+        description: Specifies the location the documentation should be written to.
+        type: string
+        default: ''
+
+      mode:
+        description: Specifies the output mode the project is used to be compiled with.
+        type: enum
+        enum:
+          - file
+          - module
+
+      # Theming
+      theme:
+        description: Specify the path to the theme that should be used.
+        type: string
+        default: default
+
+    steps:
+      - attach_to_workspace:
+          at: ~/
+
+      - run:
+          command: |
+            npx typedoc@<<parameters.typedoc-version>> <<parameters.source>> \
+              <<# parameters.out >> --out=<<parameters.out>> <</ parameters.out>> \
+              <<# parameters.mode >> --mode=<<parameters.mode>> <</ parameters.mode>> \
+              <<# parameters.theme >> --theme=<<parameters.theme>> <</ parameters.theme>>
+
 jobs:
   build:
     branches:
@@ -51,3 +95,28 @@ jobs:
             JEST_JUNIT_OUTPUT: '/tmp/reports/junit/js-test-results.xml'
       - store_test_results:
           path: /tmp/reports/junit/js-test-results.xml
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./*
+
+  build_docs:
+    docker:
+      - image: circleci/node:10
+
+    steps:
+      - build-typedoc:
+          out: ./docs
+          mode: file
+          theme: minimal
+
+      - store_artifacts:
+          path: ./docs
+
+workflows:
+  version: 2
+  build_and_docs:
+    jobs:
+      - build_docs:
+          requires:
+            - build
