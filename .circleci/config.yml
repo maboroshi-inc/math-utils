@@ -23,6 +23,10 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -33,9 +37,9 @@ jobs:
       - run: npm install
 
       - save_cache:
-          paths:
-            - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
 
       # run lint
       - run: npm run lint
