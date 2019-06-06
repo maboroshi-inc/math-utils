@@ -11,8 +11,8 @@ jobs:
 
     docker:
       # specify the version you desire here
-      - image: circleci/node:8
-      
+      - image: circleci/node:10
+
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -26,28 +26,28 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}-{{ .Branch }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
       - run: npm install
 
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "package.json" }}-{{ .Branch }}
 
       # run lint
       - run: npm run lint
 
       # run type checking
       - run: npx tsc --noEmit
-        
+
       # run tests!
       - run:
           name: Jest Suite
           command: npx jest --ci --testResultsProcessor="jest-junit"
           environment:
-            JEST_JUNIT_OUTPUT: "/tmp/reports/junit/js-test-results.xml"
+            JEST_JUNIT_OUTPUT: '/tmp/reports/junit/js-test-results.xml'
       - store_test_results:
           path: /tmp/reports/junit/js-test-results.xml
