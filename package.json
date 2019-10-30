@@ -30,7 +30,6 @@
   "devDependencies": {
     "@maboroshi/eslint-config": "^2.0.0-beta.3",
     "@maboroshi/prettier-config": "^1.0.0",
-    "@maboroshi/tslint-config": "^1.0.1",
     "@types/jest": "^24.0.13",
     "eslint": "^6.6.0",
     "husky": "^3.0.0",
@@ -45,7 +44,6 @@
     "rollup-plugin-progress": "^1.1.1",
     "rollup-plugin-typescript2": "^0.25.1",
     "ts-jest": "^24.0.2",
-    "tslint": "^5.17.0",
     "typedoc": "^0.15.0",
     "typescript": "^3.5.1"
   },
