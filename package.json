@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/maboroshi-inc/math-utils#readme",
   "devDependencies": {
-    "@maboroshi/eslint-config": "^2.0.0-beta.3",
+    "@maboroshi/eslint-config": "^2.0.0",
     "@maboroshi/prettier-config": "^1.0.0",
     "@types/jest": "^24.0.13",
     "eslint": "^6.6.0",
