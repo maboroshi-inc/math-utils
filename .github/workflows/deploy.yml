@@ -1,0 +1,61 @@
+name: Deploy
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  test:
+    name: pre-process to publish
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: version-cehck
+        run: npx can-npm-publish --verbose
+
+  publish:
+    name: publish to npm
+
+    needs: [test]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: https://registry.npmjs.org/
+      - name: npm install
+        run: npm ci
+        env:
+          CI: true
+      - name: npm publish
+        run: npm publish --access=public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  deploy:
+    name: post-process to publish
+
+    needs: [test]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: npm install, deploy document
+        run: |
+          npm ci
+          npx typedoc --out ./docs --mode file --ignoreCompilerErrors --theme minimal
+          npx gh-pages -d docs -u "${{ secrets.PUBLISH_GH_PAGES_USER }}"  -r "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+        env:
+          CI: true
