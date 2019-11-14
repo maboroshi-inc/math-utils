@@ -10,7 +10,6 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "doc": "typedoc --out ./docs --mode file --theme minimal",
     "lint": "eslint src/**/*.ts __tests__/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run lint && npm run test && npm run build",
