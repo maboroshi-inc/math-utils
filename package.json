@@ -29,7 +29,7 @@
     "@maboroshi/eslint-config": "^2.0.0",
     "@maboroshi/prettier-config": "^1.0.0",
     "@types/jest": "^24.0.13",
-    "@types/node": "^12.12.3",
+    "@types/node": "^13.7.1",
     "eslint": "^6.6.0",
     "husky": "^3.0.0",
     "jest": "^24.8.0",
