@@ -3,12 +3,16 @@ update_configs:
   - package_manager: javascript
     directory: '/'
     update_schedule: 'weekly'
+    automerged_updates:
+      - match:
+          dependency_type: 'development'
+          update_type: 'all'
     allowed_updates:
       - match:
           update_type: 'security'
       - match:
+          dependency_type: 'production'
           update_type: 'all'
-          dependency_type: 'direct'
     default_reviewers:
       - ajunajunajun
       - haribote
