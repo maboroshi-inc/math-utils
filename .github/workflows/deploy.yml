@@ -12,9 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          node-version-file: '.node-version'
       - name: version-cehck
         run: npx can-npm-publish --verbose
 
@@ -27,9 +27,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          node-version-file: '.node-version'
           registry-url: https://registry.npmjs.org/
       - name: npm install
         run: npm ci
@@ -49,9 +49,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          node-version-file: '.node-version'
       - name: npm install, deploy document
         run: |
           npm ci
