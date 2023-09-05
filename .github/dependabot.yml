@@ -8,9 +8,7 @@ updates:
     timezone: Asia/Tokyo
   open-pull-requests-limit: 10
   reviewers:
-  - haribote
   - isoden
-  - NaokiMatsuda
   - oti
   allow:
   - dependency-type: production
