@@ -9,6 +9,5 @@ updates:
   open-pull-requests-limit: 10
   reviewers:
   - isoden
-  - oti
   allow:
   - dependency-type: production
